@@ -6,14 +6,14 @@ const app = express();
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
     cors: {
-        origin: "https://chat-app-frontend-0hj0.onrender.com", // Allow requests from this origin
+        origin: "https://chat-app-frontend-peach-three.vercel.app/", // Allow requests from this origin
         methods: ["GET", "POST"] // Allow these HTTP methods
     }
 });
 
 // Middleware to handle CORS (Cross-Origin Resource Sharing)
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://chat-app-frontend-0hj0.onrender.com");
+    res.setHeader("Access-Control-Allow-Origin", "https://chat-app-frontend-peach-three.vercel.app/");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST");
     next();
 });
